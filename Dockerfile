@@ -1,2 +1,2 @@
-FROM ubuntu
-RUN apt update
+FROM tomcat
+COPY **/target/**.war /webapps/
