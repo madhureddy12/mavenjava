@@ -25,7 +25,7 @@ stages{
                 }
         stage('docker'){
             steps {
-                sh 'sudo su && docker build -t xyz .'
+                sh 'docker build -t xyz .'
                 }
               }
          stage('deploy-helm'){
