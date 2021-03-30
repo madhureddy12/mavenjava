@@ -28,6 +28,11 @@ stages{
                 sh 'mvn clean package'
                 }
               }
+         stage('deploy-helm'){
+            steps {
+                sh 'mvn clean package' 
+            }
+         }
             }
         }
 
