@@ -19,12 +19,15 @@ stages{
                 success {
                     echo 'Now Archiving...'
                     archiveArtifacts artifacts: '**/target/*.war'
-         stage('docker'){
-            steps {
-                sh 'mvn clean package'
+        
                      }
                    }       
                 }
+          stage('docker'){
+            steps {
+                sh 'mvn clean package'
+                }
+              }
             }
         }
 
