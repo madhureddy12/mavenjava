@@ -23,7 +23,7 @@ stages{
                      }
                    }       
                 }
-          stage('docker'){
+        stage('docker'){
             steps {
                 sh 'mvn clean package'
                 }
