@@ -25,7 +25,7 @@ stages{
                 }
         stage('docker'){
             steps {
-                sh 'mvn clean package'
+                sh 'docker build -t xyz .'
                 }
               }
          stage('deploy-helm'){
