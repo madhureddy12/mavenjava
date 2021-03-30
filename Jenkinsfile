@@ -23,18 +23,5 @@ stages{
             }
         }
 
-        stage ('Deployments'){
-            parallel{
-                stage ('Deploy to Staging'){
-                    steps {
-                    }
-                }
-
-                stage ("Deploy to Production"){
-                    steps {
-                    }
-                }
-            }
-        }
     }
 }
