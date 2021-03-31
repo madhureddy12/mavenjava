@@ -25,7 +25,7 @@ stages{
                 }
         stage('docker'){
             steps {
-                sh 'docker build -t xyz .'
+                sh 'docker build -t xv .'
                 }
               }
          stage('deploy-helm'){
