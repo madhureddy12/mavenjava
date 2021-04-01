@@ -32,7 +32,9 @@ stages{
               }
          stage('deploy-helm'){
             steps {
-                sh 'mvn clean package' 
+                sh 'gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project dynamic-fulcrum-303503'
+                sh 'helm ls'
+                sh 'helm install tomcat tomcat' 
             }
          }
             }
