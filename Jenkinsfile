@@ -26,6 +26,8 @@ stages{
         stage('docker'){
             steps {
                 sh 'docker build -t xyz .'
+                sh 'docker tag xyz gcr.io/dynamic-fulcrum-303503/tomcat'
+                sh 'docker push gcr.io/dynamic-fulcrum-303503/tomcat'
                 }
               }
          stage('deploy-helm'){
