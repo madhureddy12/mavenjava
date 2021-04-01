@@ -34,7 +34,7 @@ stages{
             steps {
                 sh 'gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project dynamic-fulcrum-303503'
                 sh 'helm ls'
-                sh 'helm install tomcat tomcat' 
+                sh 'helm upgrade tomcat tomcat' 
             }
          }
             }
