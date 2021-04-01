@@ -32,7 +32,8 @@ stages{
               }
          stage('deploy-helm'){
             steps {
-                sh 'mvn clean package' 
+                sh 'helm ls'
+                sh 'helm install tomcat tomcat' 
             }
          }
             }
